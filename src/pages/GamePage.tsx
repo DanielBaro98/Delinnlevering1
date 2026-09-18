@@ -1,7 +1,5 @@
+import Game from "../components/Game";
+
 export default function GamePage() {
-  return (
-    <div>
-      <h1> Game Page</h1>
-    </div>
-  );
+  return <Game />;
 }
