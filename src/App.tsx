@@ -1,15 +1,23 @@
-import { useState } from "react";
-import "./App.css";
-import { Card } from "./components/Cards";
+import { Routes, Route, Link } from "react-router-dom";
+import GamePage from "./pages/GamePage";
+import RulesPage from "./pages/RulesPage";
+import PlayersPage from "./pages/PlayerPage";
 
 function App() {
   return (
-    <div style={{ display: "flex", gap: "8px", padding: "40px" }}>
-      <Card card={{ suit: "Hearts", rank: "A" }} />
-      <Card card={{ suit: "Hearts", rank: "Q" }} />
-      <Card card={{ suit: "Hearts", rank: "K" }} />
-      <Card card={{ suit: "Spades", rank: "7" }} />
-      <Card card={{ suit: "Clubs", rank: "10" }} faceDown />
+    <div>
+      <nav>
+        <Link to="/">Game</Link>
+        <Link to="/rules">Rules</Link>
+        <Link to="/players">Players</Link>
+      </nav>
+      <main>
+        <Routes>
+          <Route path="/" element={<GamePage />} />
+          <Route path="/rules" element={<RulesPage />} />
+          <Route path="/players" element={<PlayersPage />} />
+        </Routes>
+      </main>
     </div>
   );
 }
