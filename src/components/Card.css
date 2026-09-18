@@ -1,0 +1,30 @@
+.card {
+  width: 80px;
+  height: 112px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 8px;
+  align-items: start;
+  justify-items: start;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-symbol {
+  font-size: 32px;
+  justify-self: center;
+  align-self: center;
+}
+
+.card-rank-bottom {
+  justify-self: end;
+}
+.red {
+  color: crimson;
+}
+.black {
+  color: black;
+}
